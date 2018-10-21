@@ -11,6 +11,10 @@
   ],
   "author": "Giamir Buoncristiani",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giamir/eslint-plugin-enzyme"
+  },
   "scripts": {
     "lint": "eslint ./",
     "pretest": "yarn lint",
