@@ -13,7 +13,7 @@ $ npm i eslint --save-dev
 Next, install `eslint-plugin-enzyme`:
 
 ```
-$ npm install eslint-plugin-enzyme --save-dev
+$ npm i eslint-plugin-enzyme --save-dev
 ```
 
 **Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-enzyme` globally.
@@ -36,18 +36,18 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "enzyme/rule-name": 2
+        "enzyme/no-shallow": 2
     }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [enzyme/no-shallow](docs/rules/no-shallow.md)
 
 # License
 
-ESLint-plugin-enzyme is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+eslint-plugin-enzyme is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 
 
