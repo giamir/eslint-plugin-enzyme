@@ -45,6 +45,10 @@ Then configure the rules you want to use under the rules section.
 
 * Fill in provided rules here
 
+# License
+
+ESLint-plugin-enzyme is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+
 
 
 
