@@ -17,8 +17,9 @@
   },
   "scripts": {
     "lint": "eslint ./",
-    "pretest": "yarn lint",
-    "test": "mocha tests --recursive"
+    "pretest": "npm run lint",
+    "unit-test": "mocha tests --recursive",
+    "test": "npm run unit-test"
   },
   "dependencies": {
     "requireindex": "^1.2.0"

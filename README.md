@@ -1,4 +1,5 @@
 # eslint-plugin-enzyme
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 Eslint rules for enzyme - JS testing utilites library for React
 
@@ -50,6 +51,9 @@ Then configure the rules you want to use under the rules section.
 eslint-plugin-enzyme is licensed under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
 
 
-
+[npm-url]: https://npmjs.org/package/eslint-plugin-enzyme
+[npm-image]: https://img.shields.io/npm/v/eslint-plugin-enzyme.svg
+[travis-url]: https://travis-ci.org/giamir/eslint-plugin-enzyme
+[travis-image]: https://travis-ci.org/giamir/eslint-plugin-enzyme.svg?branch=master
 
 
