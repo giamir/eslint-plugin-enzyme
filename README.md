@@ -1,5 +1,5 @@
 # eslint-plugin-enzyme
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url] [![Maintenance Status][status-image]][status-url] 
 
 Eslint rules for enzyme - JS testing utilites library for React
 
@@ -55,5 +55,9 @@ eslint-plugin-enzyme is licensed under the [MIT License](http://www.opensource.o
 [npm-image]: https://img.shields.io/npm/v/eslint-plugin-enzyme.svg
 [travis-url]: https://travis-ci.org/giamir/eslint-plugin-enzyme
 [travis-image]: https://travis-ci.org/giamir/eslint-plugin-enzyme.svg?branch=master
+[deps-url]: https://david-dm.org/giamir/eslint-plugin-enzyme
+[deps-image]: https://img.shields.io/david/giamir/eslint-plugin-enzyme.svg
+[status-url]: https://github.com/giamir/eslint-plugin-enzyme/pulse
+[status-image]: https://img.shields.io/github/last-commit/giamir/eslint-plugin-enzyme.svg
 
 
