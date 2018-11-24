@@ -19,41 +19,36 @@ const parserOptions = {
   }
 };
 
+const ERROR_MESSAGE = 'Shallow rendering is not allowed. Please prefer Full DOM rendering (mount).';
+
 // ------------------------------------------------------------------------------
 // Tests
 // ------------------------------------------------------------------------------
 
+const VALID_PATTERNS = [
+  'const shallow = { key: \'value\' };',
+  'import { mount } from \'enzyme\';',
+  'const { mount } = require(\'enzyme\');',
+  'import enzyme from \'enzyme\';',
+  'const enzyme = require(\'enzyme\');'
+];
+
+const INVALID_PATTERNS = [
+  'import { shallow } from \'enzyme\';',
+  'import { mount, shallow } from \'enzyme\';',
+  'const { shallow } = require(\'enzyme\');',
+  'const { mount, shallow } = require(\'enzyme\');',
+  'import enzyme from \'enzyme\'; enzyme.shallow();',
+  'const enzyme = require(\'enzyme\'); enzyme.shallow();'
+];
+
 const ruleTester = new RuleTester({parserOptions});
 ruleTester.run('no-shallow', rule, {
 
-  valid: [
-    {
-      code: 'const wrapper = mount(<Component />);'
-    }
-  ],
+  valid: VALID_PATTERNS.map(pattern => ({code: pattern})),
 
-  invalid: [
-    {
-      code: 'shallow(<Component />);',
-      errors: [
-        {
-          message: 'Shallow rendering is not allowed. Please prefer Full DOM rendering (mount).'
-        }
-      ]
-    },
-    {
-      code: `
-        const wrapper = shallow(<Component />);
-        const secondWrapper = shallow(<Component />);
-      `,
-      errors: [
-        {
-          message: 'Shallow rendering is not allowed. Please prefer Full DOM rendering (mount).'
-        },
-        {
-          message: 'Shallow rendering is not allowed. Please prefer Full DOM rendering (mount).'
-        }
-      ]
-    }
-  ]
+  invalid: INVALID_PATTERNS.map(pattern => ({
+    code: pattern,
+    errors: [{message: ERROR_MESSAGE}]
+  }))
 });

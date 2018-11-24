@@ -1,38 +1,37 @@
 # Disallow shallow rendering components (no-shallow)
 
-Please describe the origin of the rule here.
+The user should prefer Full DOM rendering over shallow rendering your application.
 
+> With shallow rendering, I can refactor my component’s implementation and my tests break. With shallow rendering, I can break my application and my tests say everything’s still working.<br><br>
+Kent C. Dodds
+
+More information:
+[Why I Never Use Shallow Rendering](https://blog.kentcdodds.com/why-i-never-use-shallow-rendering-c08851a68bb7) by Kent C. Dodds
 
 ## Rule Details
 
-This rule aims to...
+The following patterns are considered warnings:
 
-Examples of **incorrect** code for this rule:
-
-```js
+```jsx
 import { shallow } from 'enzyme';
 
-const wrapper = shallow(<Component />); 
+const { shallow } =  require('enzyme');
 
+import enzyme from 'enzyme';
+enzyme.shallow(<Component />);
+
+const enzyme = require('enzyme');
+enzyme.shallow(<Component />)
 ```
 
-Examples of **correct** code for this rule:
+The following patterns are **not** considered warnings:
 
-```js
+```jsx
 import { mount } from 'enzyme';
 
-const wrapper = mount(<Component />); 
+import enzyme from 'enzyme';
 
+const { mount } = require('enzyme');
+
+const enzyme = require('enzyme');
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
-
-## When Not To Use It
-
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
