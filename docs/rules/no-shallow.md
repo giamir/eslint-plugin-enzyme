@@ -1,6 +1,6 @@
 # Disallow shallow rendering components (no-shallow)
 
-The user should prefer Full DOM rendering over shallow rendering your application.
+The user should prefer Full DOM rendering over shallow rendering components.
 
 > With shallow rendering, I can refactor my component’s implementation and my tests break. With shallow rendering, I can break my application and my tests say everything’s still working.<br><br>
 Kent C. Dodds
