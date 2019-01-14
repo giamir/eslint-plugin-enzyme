@@ -37,7 +37,8 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "enzyme/no-shallow": 2
+        "enzyme/no-shallow": 2,
+        "enzyme/only-find-by-css-selectors": 2
     }
 }
 ```
@@ -45,6 +46,7 @@ Then configure the rules you want to use under the rules section.
 ## Supported Rules
 
 * [enzyme/no-shallow](docs/rules/no-shallow.md)
+* [enzyme/only-find-by-css-selectors](docs/rules/only-find-by-css-selectors.md)
 
 # License
 
