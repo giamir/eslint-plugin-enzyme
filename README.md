@@ -42,6 +42,16 @@ Then configure the rules you want to use under the rules section.
 }
 ```
 
+
+You can also use the `enzyme/globals` environment if you are injecting `shallow`, `mount`, and `render` into the global scope: (for example if you are using [`jest-environment-enzyme`](https://github.com/FormidableLabs/enzyme-matchers/tree/master/packages/jest-environment-enzyme)) 
+```json
+{
+    "env": {
+        "enzyme/globals": true
+    }
+}
+
+```
 ## Supported Rules
 
 * [enzyme/no-shallow](docs/rules/no-shallow.md)
