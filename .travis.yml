@@ -8,8 +8,6 @@ node_js:
   - '10'
   - '9'
   - '8'
-  - '7'
-  - '6'
 before_install:
   - 'nvm install-latest-npm'
 before_script:
@@ -25,7 +23,6 @@ env:
     - ESLINT=6
     - ESLINT=5
     - ESLINT=4
-    - ESLINT=3
 matrix:
   fast_finish: true
   include:
@@ -35,4 +32,4 @@ matrix:
     - node_js: '13'
     - node_js: '11'
     - node_js: '9'
-    - node_js: '7'
+    - node_js: '8'
